@@ -50,7 +50,4 @@ public class Todo {
     this.priority = priority;
   }
 
-  
-
-
 }
