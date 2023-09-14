@@ -27,6 +27,7 @@ public class TodoController {
 
   @PostMapping
   public List<Todo> create(@RequestBody @Valid Todo todo){
+    System.out.println(todo);
    return todoService.create(todo);
   }
 

@@ -14,20 +14,16 @@ public class Todo {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
-  
   @NotBlank
   private String name;
-    
   @NotBlank
   private String description;
-    
-  @NotBlank
   private boolean finish;
-
-  @NotBlank
   private int priority;
-  
-  public Todo(String name, String description, boolean finish, int priority) {
+
+  public Todo() {}
+
+  public Todo(@NotBlank String name, @NotBlank String description, boolean finish, int priority) {
     this.name = name;
     this.description = description;
     this.finish = finish;
@@ -52,25 +48,5 @@ public class Todo {
 
   public int getPriority() {
     return priority;
-  }
-
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public void setDescription(String description) {
-    this.description = description;
-  }
-
-  public void setFinish(boolean finish) {
-    this.finish = finish;
-  }
-
-  public void setPriority(int priority) {
-    this.priority = priority;
   }
 }
